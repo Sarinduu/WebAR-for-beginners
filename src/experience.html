@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AR Viewer | WebAR Marker Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- A-Frame & MindAR -->
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+  <script src="https://unpkg.com/aframe-animation-component@5.1.0/dist/aframe-animation-component.min.js"></script>
+
+  <!-- Favicon & CSS -->
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./styles/ar.css" />
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="index.html" class="back-button">← Back to Home</a>
+
+  <!-- AR Scene Container -->
+  <div class="ar-container">
+    <a-scene
+      mindar-image="imageTargetSrc: ../public/assets/markers/coin.mind"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+      embedded
+    >
+      <!-- Preload Assets -->
+      <a-assets>
+        <img id="marker" src="../public/assets/markers/coin.png" />
+        <a-asset-item id="spaceshipModel" src="../public/assets/models/spaceship.glb"></a-asset-item>
+        <audio id="arSound" src="../public/assets/audio/sound_track.mp3" preload="auto"></audio>
+      </a-assets>
+
+      <!-- Camera -->
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <!-- Marker Entity -->
+      <a-entity mindar-image-target="targetIndex: 0" id="target" sound="src: #arSound; autoplay: false; positional: false">
+        <a-plane src="#marker" position="0 0 0" height="0.5" width="0.5" rotation="0 0 0"></a-plane>
+
+        <a-entity id="orbit-pivot" position="0 0 0"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 6000; easing: linear">
+          <a-gltf-model
+            id="shipModel"
+            src="#spaceshipModel"
+            position="0 0 1"
+            scale="0.05 0.05 0.05"
+            rotation="0 90 0"
+            material="opacity: 0; transparent: true"
+            animation__fadein="property: material.opacity; from: 0; to: 1; dur: 1000; startEvents: fadein"
+          ></a-gltf-model>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </div>
+
+  <script src="./scripts/ar.js"></script>
+</body>
+</html>

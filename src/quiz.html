@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz | AR Explorer</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">AR Explorer</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="quiz.html" class="active">Quiz</a></li>
+      <li><a href="ar.html">Experience AR</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Test Your AR Knowledge</h1>
+    <p>Answer the following questions to see how much you've learned!</p>
+  </header>
+
+  <section>
+    <form id="quizForm">
+      <div class="question-block">
+        <p><strong>1. What does AR stand for?</strong></p>
+        <label><input type="radio" name="q1" value="a" /> A. Alternate Reality</label><br />
+        <label><input type="radio" name="q1" value="b" /> B. Augmented Reality</label><br />
+        <label><input type="radio" name="q1" value="c" /> C. Applied Rendering</label>
+      </div>
+
+      <div class="question-block">
+        <p><strong>2. What is marker-based AR?</strong></p>
+        <label><input type="radio" name="q2" value="a" /> A. AR using GPS data</label><br />
+        <label><input type="radio" name="q2" value="b" /> B. AR using printed images to trigger content</label><br />
+        <label><input type="radio" name="q2" value="c" /> C. AR using VR headsets only</label>
+      </div>
+
+      <div class="question-block">
+        <p><strong>3. Which device is NOT commonly used for AR?</strong></p>
+        <label><input type="radio" name="q3" value="a" /> A. Smartphone</label><br />
+        <label><input type="radio" name="q3" value="b" /> B. Smart Glasses</label><br />
+        <label><input type="radio" name="q3" value="c" /> C. Microwave</label>
+      </div>
+
+      <button type="submit" class="btn-primary">Submit Quiz</button>
+    </form>
+
+    <div id="result" style="margin-top: 2rem; font-weight: bold;"></div>
+  </section>
+
+  <script src="./scripts/quiz.js"></script>
+</body>
+</html>

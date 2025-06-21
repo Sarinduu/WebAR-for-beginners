@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Explorer - Learn and Experience AR</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero full-screen">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-image">
+          <img
+            src="../public/assets/images/img001.gif"
+            alt="AR Icon"
+            class="hero-icon"
+          />
+        </div>
+        <div class="hero-content animated-fade">
+          <h1>Welcome to <span class="highlight">AR Explorer</span></h1>
+          <p class="tagline">
+            Learn. Explore. Experience Augmented Reality like never before.
+          </p>
+          <a href="#intro" class="btn-primary">Start Exploring</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section One : Intro + Learn -->
+    <section id="intro-learn" class="section full-screen alt-bg">
+      <div class="intro-container">
+        <div class="intro-text">
+          <h2>Step Into the World of Augmented Reality</h2>
+          <p>
+            <strong>AR Explorer</strong> offers a simple, engaging way to
+            discover the basics of Augmented Reality and experience it in
+            action, right from your device.
+          </p>
+          <p>
+            Learn how AR works, see where it’s used, and explore it hands-on
+            using your camera in real time.
+          </p>
+
+          <div class="feature-cards">
+            <div class="feature-card">
+              <span>
+                <img
+                  src="../public/assets/Icons/book.png"
+                  alt="f1"
+                  width="50px"
+                />
+              </span>
+              <div>
+                <h4>Learn the Basics</h4>
+                <p>
+                  Understand how AR integrates digital content with the real
+                  world.
+                </p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <span>
+                <img
+                  src="../public/assets/Icons/augmented-reality.png"
+                  alt="f2"
+                  width="50px"
+                />
+              </span>
+              <div>
+                <h4>Experience It Live</h4>
+                <p>
+                  Launch your camera and interact with 3D objects in your space.
+                </p>
+              </div>
+            </div>
+            <div class="feature-card">
+              <span>
+                <img
+                  src="../public/assets/Icons/innovation.png"
+                  alt="f3"
+                  width="50px"
+                />
+              </span>
+              <div>
+                <h4>Simple and Fun</h4>
+                <p>Accessible for everyone, no prior knowledge needed.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <a href="learn.html" class="btn-primary">Start Learning</a>
+          </div>
+        </div>
+
+        <div class="intro-image">
+          <img
+            src="../public/assets/images/Arimage3.png"
+            alt="AR Demo Visual"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Two : Experience AR -->
+    <section class="section full-screen experience-portal-section">
+      <div class="experience-portal two-column-layout">
+        <div class="experience-image">
+          <img
+            src="../public/assets/images/Arimage4.png"
+            alt="AR Demo Preview"
+            class="experience-preview"
+          />
+        </div>
+        <div class="experience-content">
+          <h2>Step Into Augmented Reality</h2>
+          <p>
+            Interact with virtual objects layered onto your world. No apps, no
+            installs, just your device's browser and camera. Also customize your
+            AR experience with different models, interactions, and scenes to
+            suit your needs.
+          </p>
+          <a href="ar.html" class="btn-primary">Try AR Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section three : Quiz -->
+    <section class="section full-screen quiz-radar-section light-theme">
+      <div class="quiz-radar-grid">
+        <!-- LEFT SIDE: Title and Description -->
+        <div class="radar-info-box">
+          <div>
+            <h2>Knowledge Scan</h2>
+            <p>
+              Let’s scan your brainwaves… <br />
+              <em>Just kidding, it’s a simple quiz, but a powerful one!</em>
+            </p>
+            <div style="text-align: left">
+              <p>
+                This quick test will help you evaluate your basic understanding
+                of<br />
+                <strong>Augmented Reality (AR)</strong>, from how it works to
+                where it's used.
+              </p>
+
+              <p>
+                Whether you're new to AR or brushing up on the basics,
+                <br />this is the perfect way to test your knowledge and level
+                up your skills.
+              </p>
+            </div>
+            <p>
+              <em>Ready to prove your AR expertise?</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: Radar + Status + Button -->
+        <div class="radar-launch-container">
+          <div class="radar-ui-wrapper">
+            <div class="radar-visual-bg">
+              <div class="radar-blur-layer"></div>
+              <div class="radar-background">
+                <div class="radar-sweep"></div>
+                <div class="radar-ring ring-outer"></div>
+                <div class="radar-ring ring-middle"></div>
+                <div class="radar-ring ring-inner"></div>
+
+                <!-- Radar Blips -->
+                <div
+                  class="radar-target"
+                  style="top: 20%; left: 55%; animation-delay: 1s"
+                >
+                  <div class="target-name">Quiz</div>
+                </div>
+                <div
+                  class="radar-target"
+                  style="top: 60%; left: 30%; animation-delay: 2.2s"
+                ></div>
+                <div
+                  class="radar-target"
+                  style="top: 40%; left: 75%; animation-delay: 3.4s"
+                ></div>
+                <div
+                  class="radar-target"
+                  style="top: 30%; left: 20%; animation-delay: 1.6s"
+                ></div>
+              </div>
+            </div>
+
+            <div class="radar-stats-ui">
+              <div class="radar-stats">
+                <p><strong>Status:</strong> Target Locked</p>
+                <p><strong>Scan Mode:</strong> AR Basics</p>
+              </div>
+              <a href="quiz.html" class="btn-primary">Launch Scan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
