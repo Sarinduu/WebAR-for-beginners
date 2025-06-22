@@ -1,10 +1,4 @@
-:root {
-  --primary-color: #00c6ff;
-  --bg-dark: #0d1b2a;
-  --text-light: #f4f4f4;
-  --font-stack: 'Segoe UI', Roboto, sans-serif;
-}
-
+/* ===================== Base Reset ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,70 +6,158 @@
 }
 
 body {
-  font-family: var(--font-stack);
-  background-color: var(--bg-dark);
-  color: var(--text-light);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-header {
-  background-color: #112e42;
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 2px solid #00c6ff;
-}
-
-nav h1 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-}
-
-.container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.intro {
-  max-width: 600px;
-}
-
-.intro h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.intro p {
-  font-size: 1rem;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin-bottom: 2rem;
-  color: #ccd;
+  background: #f4f4f4;
+  color: #333;
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
+/* ===================== Navbar ===================== */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
   color: #fff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #00f2ff;
+}
+
+.sticky-nav.scrolled .logo,
+.sticky-nav.scrolled .nav-links a {
+  color: #000;
+}
+
+/* ===================== Buttons ===================== */
+
+/* Button styling */
+.btn-primary {
+  background-color: #00f2ff;
+  color: #101b30;
+  border: none;
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  font-weight: 600;
+  border-radius: 10px;
   font-size: 1rem;
-  transition: background 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
 }
 
 .btn-primary:hover {
-  background-color: #00a8dd;
+  background-color: #00c9e0;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(0, 242, 255, 0.6);
+}
+.btn-secondary {
+  background-color: #ffffff;
+  color: #0077cc;
+  border: 2px solid #0077cc;
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-footer {
+.btn-secondary:hover {
+  background-color: #e6f2ff;
+  color: #005fa3;
+}
+
+/* ===================== Footer ===================== */
+.site-footer {
+  background-color: #0a0f2c;
+  color: #cfd8f0;
+  padding: 40px 20px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1 1 300px;
+}
+
+.footer-social {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-left h4 {
+  font-size: 1.8rem;
+  color: #00f2ff;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer-social h5 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 1.3rem;
+  color: #cfd8f0;
+  transition: color 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+  color: #00f2ff;
+}
+
+.footer-bottom {
   text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
-  background-color: #081828;
-  color: #aaa;
+  padding-top: 20px;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
 }

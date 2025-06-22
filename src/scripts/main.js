@@ -1,20 +1,11 @@
-// window.addEventListener('scroll', () => {
-//   const nav = document.querySelector('.sticky-nav');
-//   if (window.scrollY > 50) {
-//     nav.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+// window.addEventListener("scroll", function () {
+//   const nav = document.querySelector(".sticky-nav");
+//   if (window.scrollY > window.innerHeight - 80) {
+//     nav.classList.add("scrolled");
 //   } else {
-//     nav.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+//     nav.classList.remove("scrolled");
 //   }
 // });
-
-window.addEventListener("scroll", function () {
-  const nav = document.querySelector(".sticky-nav");
-  if (window.scrollY > window.innerHeight - 80) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-});
 
 fetch("./components/navbar.html")
   .then((response) => response.text())

@@ -1,51 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn AR | AR Explorer</title>
-  <link rel="stylesheet" href="./styles/style.css" />
-</head>
-<body>
-  <nav>
-    <div class="logo">AR Explorer</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="learn.html" class="active">Learn</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="ar.html">Experience AR</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn AR | AR Explorer</title>
+    <link rel="stylesheet" href="./styles/learnPageStyles.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
 
-  <header>
-    <h1>Learn About Augmented Reality</h1>
-    <p>Understand the fundamentals of AR technology and its impact.</p>
-  </header>
+    <!-- Learn AR - Hero Section -->
+    <section class="learn-hero-section">
+      <div class="learn-hero-content">
+        <div class="learn-text-block">
+          <h1>Learn Augmented Reality</h1>
+          <p>
+            Augmented Reality (AR) is transforming how we interact with the
+            world by blending digital content with our real environment.
+            <br /><br />
+            Dive into this immersive technology, understand its core principles,
+            explore real-world applications, and see why AR is shaping the
+            future.
+          </p>
+          <a href="#what-is-ar" class="btn-primary">Start Exploring</a>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>What is Augmented Reality (AR)?</h2>
-    <p>
-      Augmented Reality is a technology that overlays digital content — such as images, models, or information — onto the real world through a device like a smartphone or AR headset. Unlike Virtual Reality, AR does not replace the real world; instead, it enhances it.
-    </p>
-  </section>
+    <!-- What is AR Section -->
+    <section id="what-is-ar" class="ar-definition-section">
+      <div class="ar-container">
+        <div class="ar-text">
+          <h2>What is Augmented Reality?</h2>
+          <p>
+            Augmented Reality (AR) is a technology that overlays digital
+            content—such as images, sounds, and information—onto the real world
+            through devices like smartphones, tablets, and AR glasses.
+            <br /><br />
+            Unlike Virtual Reality (VR), which immerses users in a completely
+            digital environment, AR enhances the existing physical environment
+            by adding layers of digital elements in real time.
+          </p>
+          <ul class="ar-key-points">
+            <li>Blends real and virtual environments</li>
+            <li>Interactive in real-time</li>
+            <li>3D registration of virtual and real objects</li>
+          </ul>
+        </div>
+        <div class="ar-image">
+          <img
+            src="assets/images/ar-definition-visual.png"
+            alt="What is AR illustration"
+          />
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Types of AR</h2>
-    <ul>
-      <li><strong>Marker-based AR:</strong> Uses image recognition (e.g., QR codes, printed images) to trigger content.</li>
-      <li><strong>Markerless AR:</strong> Uses GPS, accelerometer, or SLAM (simultaneous localization and mapping) to detect environments.</li>
-      <li><strong>Face-based AR:</strong> Used in filters (e.g., Instagram/Snapchat) for face tracking and enhancement.</li>
-    </ul>
-  </section>
+    <!-- How AR Works Section -->
+    <section id="how-ar-works" class="how-ar-works-section">
+      <div class="ar-container">
+        <h2>How Augmented Reality Works</h2>
+        <p>
+          Augmented Reality systems follow a basic pipeline that allows digital
+          content to blend with the real world in real-time. Here's a simplified
+          explanation:
+        </p>
 
-  <section>
-    <h2>Applications of AR</h2>
-    <p>
-      AR is used in a wide variety of fields: education, gaming, retail, healthcare, architecture, and more. It helps users interact with virtual elements in the context of the physical world.
-    </p>
-  </section>
+        <div class="ar-steps-container">
+          <div class="ar-step">
+            <h3>1. Environment Capture</h3>
+            <p>
+              AR devices use cameras and sensors (like GPS, accelerometer, and
+              gyroscope) to detect and understand the real-world environment.
+            </p>
+          </div>
 
-  <script src="js/main.js"></script>
-</body>
+          <div class="ar-step">
+            <h3>2. Scene Understanding</h3>
+            <p>
+              The system processes the data to recognize surfaces, objects, and
+              spatial features — often using techniques like SLAM (Simultaneous
+              Localization and Mapping).
+            </p>
+          </div>
+
+          <div class="ar-step">
+            <h3>3. Content Rendering</h3>
+            <p>
+              3D models, animations, text, or audio are generated and aligned to
+              the real-world coordinates — appearing as if they are physically
+              present.
+            </p>
+          </div>
+
+          <div class="ar-step">
+            <h3>4. Real-Time Interaction</h3>
+            <p>
+              Users can interact with the AR content via touch, gesture, voice,
+              or movement. The system updates the scene in real time as the
+              environment changes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Types of AR Section -->
+    <section id="types-of-ar" class="ar-types-section">
+      <div class="ar-container">
+        <h2>Types of Augmented Reality</h2>
+        <p>
+          Augmented Reality can be categorized into several types based on how
+          it detects and augments the environment.
+        </p>
+
+        <div class="ar-type-cards">
+          <div class="ar-type-card">
+            <h3>📌 Marker-Based AR</h3>
+            <p>
+              Uses visual markers (like QR codes or images) to trigger AR
+              content. When the camera detects the marker, the digital content
+              appears on top of it.
+            </p>
+            <p class="ar-example">
+              <strong>Example:</strong> Interactive museum exhibits using
+              printed symbols.
+            </p>
+          </div>
+
+          <div class="ar-type-card">
+            <h3>📍 Markerless AR</h3>
+            <p>
+              Also called location-based AR. It uses GPS, compass, and
+              accelerometer data to display AR based on a device’s position — no
+              physical marker needed.
+            </p>
+            <p class="ar-example">
+              <strong>Example:</strong> Pokémon GO placing characters on real
+              streets.
+            </p>
+          </div>
+
+          <div class="ar-type-card">
+            <h3>🔦 Projection-Based AR</h3>
+            <p>
+              Projects light onto surfaces and senses human interaction by
+              observing light changes. Often used in advanced devices or smart
+              environments.
+            </p>
+            <p class="ar-example">
+              <strong>Example:</strong> Virtual keyboards projected onto a desk.
+            </p>
+          </div>
+
+          <div class="ar-type-card">
+            <h3>🔁 Superimposition-Based AR</h3>
+            <p>
+              Replaces the original view of an object (partially or fully) with
+              an augmented one. It’s widely used in medical AR and product
+              design.
+            </p>
+            <p class="ar-example">
+              <strong>Example:</strong> AR apps that show bone structures over a
+              real body.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AR Applications Section -->
+    <section id="ar-applications" class="ar-applications-section">
+      <div class="ar-container">
+        <h2>Applications of Augmented Reality</h2>
+        <p>
+          Augmented Reality is revolutionizing industries by blending the
+          digital and physical worlds. Here are some of the most impactful areas
+          where AR is being applied:
+        </p>
+
+        <div class="application-grid">
+          <div class="application-card">
+            <h3>🎓 Education</h3>
+            <p>
+              AR makes learning interactive and immersive by allowing students
+              to visualize complex concepts like anatomy, astronomy, and physics
+              in 3D.
+            </p>
+          </div>
+
+          <div class="application-card">
+            <h3>🕹️ Gaming & Entertainment</h3>
+            <p>
+              One of the most popular AR uses. Games like Pokémon GO and apps
+              like Snapchat filters demonstrate how AR blends fun and
+              technology.
+            </p>
+          </div>
+
+          <div class="application-card">
+            <h3>🏥 Healthcare</h3>
+            <p>
+              Surgeons use AR to overlay digital information on the patient’s
+              body during procedures, improving accuracy and reducing risks.
+            </p>
+          </div>
+
+          <div class="application-card">
+            <h3>🛍️ Retail</h3>
+            <p>
+              Customers can try on clothes, preview furniture in their rooms, or
+              test makeup — all virtually through AR-enabled apps.
+            </p>
+          </div>
+
+          <div class="application-card">
+            <h3>🏗️ Architecture & Construction</h3>
+            <p>
+              AR lets architects and engineers visualize buildings in 3D before
+              construction, enhancing planning and client communication.
+            </p>
+          </div>
+
+          <div class="application-card">
+            <h3>🚗 Automotive</h3>
+            <p>
+              AR helps in design, simulation, and even navigation systems like
+              HUDs (Heads-Up Displays) in modern vehicles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AR vs VR vs MR Section -->
+    <section id="ar-vr-mr-comparison" class="ar-comparison-section">
+      <div class="ar-container">
+        <h2>AR vs. VR vs. MR – What’s the Difference?</h2>
+        <p>
+          While these technologies all fall under the extended reality (XR)
+          umbrella, they offer unique user experiences. Here's how they differ:
+        </p>
+
+        <div class="comparison-table">
+          <div class="comparison-header">
+            <div>Aspect</div>
+            <div>AR (Augmented Reality)</div>
+            <div>VR (Virtual Reality)</div>
+            <div>MR (Mixed Reality)</div>
+          </div>
+
+          <div class="comparison-row">
+            <div>Environment</div>
+            <div>Enhances real world with digital elements</div>
+            <div>Fully immersive virtual environment</div>
+            <div>Blends real and virtual elements with interaction</div>
+          </div>
+
+          <div class="comparison-row">
+            <div>User Interaction</div>
+            <div>Minimal; digital overlays are viewed only</div>
+            <div>High interaction in a virtual space</div>
+            <div>Interactive digital and physical elements</div>
+          </div>
+
+          <div class="comparison-row">
+            <div>Devices</div>
+            <div>Phones, tablets, smart glasses</div>
+            <div>VR headsets (e.g., Oculus, HTC Vive)</div>
+            <div>Advanced headsets (e.g., HoloLens, Magic Leap)</div>
+          </div>
+
+          <div class="comparison-row">
+            <div>Use Cases</div>
+            <div>Navigation, games, retail</div>
+            <div>Gaming, training, simulations</div>
+            <div>Industrial design, education, surgery</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="ar-challenges" class="ar-challenges-section">
+      <div class="ar-container">
+        <h2>Challenges & Limitations of Augmented Reality</h2>
+        <p>
+          Despite its rapid development, Augmented Reality still faces several
+          challenges that must be addressed before widespread adoption:
+        </p>
+        <ul class="ar-challenges-list">
+          <li>
+            <strong>Hardware Limitations:</strong> AR headsets and smart glasses
+            are often bulky, expensive, or limited in battery life and field of
+            view.
+          </li>
+          <li>
+            <strong>Privacy Concerns:</strong> AR devices can collect and
+            process real-world data, raising ethical questions about
+            surveillance and data protection.
+          </li>
+          <li>
+            <strong>Technical Complexity:</strong> Developing reliable and
+            stable AR experiences requires advanced spatial computing and high
+            processing power.
+          </li>
+          <li>
+            <strong>Content Scarcity:</strong> There's a lack of engaging,
+            high-quality AR content tailored to diverse user needs and
+            industries.
+          </li>
+          <li>
+            <strong>Environmental Constraints:</strong> AR systems may not
+            perform well in low-light, cluttered, or fast-changing environments.
+          </li>
+          <li>
+            <strong>Social Acceptance:</strong> Wearing visible AR devices in
+            public still faces skepticism and discomfort among many users.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Future of AR Section -->
+    <section id="future-of-ar" class="future-ar-section">
+      <div class="ar-container">
+        <h2>The Future of Augmented Reality</h2>
+        <p>
+          Augmented Reality is poised to revolutionize industries with emerging
+          trends and innovations. Here's what the future holds:
+        </p>
+
+        <ul class="future-ar-list">
+          <li>
+            <strong>Wider Hardware Adoption:</strong> AR glasses and headsets
+            will become lighter, more affordable, and widespread.
+          </li>
+          <li>
+            <strong>AR Cloud:</strong> A persistent, shared digital layer of
+            data over the real world will allow synchronized AR experiences.
+          </li>
+          <li>
+            <strong>5G & Edge Computing:</strong> Faster networks will allow
+            real-time, high-fidelity AR rendering with minimal latency.
+          </li>
+          <li>
+            <strong>AI Integration:</strong> Smarter AR systems will understand
+            environments and user behavior better than ever before.
+          </li>
+          <li>
+            <strong>Education & Remote Assistance:</strong> AR will expand in
+            virtual classrooms, remote surgery, and maintenance guidance.
+          </li>
+          <li>
+            <strong>Full Immersive Interfaces:</strong> Gesture and
+            voice-controlled AR will replace traditional interfaces in many
+            domains.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="ar-summary" class="ar-summary-section">
+      <div class="ar-container">
+        <h2>Summary & Takeaways</h2>
+        <p>
+          Augmented Reality (AR) represents a significant shift in how humans
+          interact with technology. By overlaying digital information — such as
+          visuals, sounds, and haptics — onto the real-world environment, AR
+          enables more natural, context-aware interactions that transcend
+          traditional screen-based interfaces.
+        </p>
+        <p>
+          Throughout this guide, we’ve explored how AR works, its core
+          technologies, applications across industries, and the challenges it
+          still faces. From education and healthcare to retail and
+          manufacturing, AR is no longer science fiction — it’s reshaping the
+          way we learn, work, and connect.
+        </p>
+        <p>
+          As AR continues to mature, its fusion with other emerging technologies
+          like Artificial Intelligence, Internet of Things (IoT), 5G networks,
+          and spatial computing will unlock unprecedented opportunities for
+          innovation and problem-solving.
+        </p>
+        <p>
+          However, with these advancements come responsibilities — addressing
+          privacy, accessibility, ethical design, and user well-being are
+          essential for sustainable growth.
+        </p>
+        <p>🔍 <strong>Key Takeaways:</strong></p>
+        <ul>
+          <li>AR enhances real-world environments — not replaces them.</li>
+          <li>
+            Applications span across education, healthcare, gaming, and beyond.
+          </li>
+          <li>
+            Challenges like hardware limitations and privacy concerns must be
+            addressed.
+          </li>
+          <li>
+            Interdisciplinary collaboration is crucial to AR’s long-term
+            success.
+          </li>
+          <li>
+            Now is the ideal time to learn, explore, and even build in the AR
+            space.
+          </li>
+        </ul>
+
+        <p>
+          The AR revolution is just beginning. Whether you're a curious learner,
+          developer, or decision-maker — staying informed and involved now means
+          leading the way in the immersive future ahead.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="./scripts/main.js"></script>
+  </body>
 </html>
